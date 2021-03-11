@@ -302,7 +302,7 @@ Vue.component("atom", {
 	template: `<button @click="player.star.primary = obj.symbol"
 	:class="{atomBtn: true, bought: player.star.primary == obj.symbol}"
 	v-if="player.star.unlockedAtoms >= obj.req"
-	:tooltip="obj.name + ': ' + obj.desc + ' (点击击以用作主要对象)'">{{obj.symbol}}
+	:tooltip="obj.name + ': ' + obj.desc + ' (点击设为主要对象)'">{{obj.symbol}}
 	</button>`
 })
 Vue.component("atom2", {
