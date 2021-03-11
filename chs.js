@@ -45,7 +45,7 @@ var cnItems = {
     'Automation': '自动化',
     'Auto-Reflectors': '自动购买反射器',
     'Auto-Fluctuations': '自动买波动',
-    '': '',
+    'Auto-Super energy': '自动超能化',
     '': '',
     '': '',
     '': '',
