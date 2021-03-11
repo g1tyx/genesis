@@ -207,73 +207,73 @@ Vue.component("atom-display", {
 		primary: [{
 			symbol: "H",
 			name: "Hydrogen",
-			desc: "Nothing interesting, the base atom you start with.",
+			desc: "没有什么有趣的，从最开始的原子开始。",
 			req: 0
 		},
 		{
 			symbol: "He",
 			name: "Helium",
-			desc: "Releases 4 times as many photons.",
+			desc: "释放4倍的光子。",
 			req: 1
 		},
 		{
 			symbol: "Ne",
 			name: "Neon",
-			desc: "Releases 20 times as many photons, and make fluctuations 1.5 times cheaper.",
+			desc: "释放20倍的光子，并使波动便宜1.5倍。",
 			req: 3
 		},
 		{
 			symbol: "Kr",
 			name: "Krypton",
-			desc: "Releases 100 times as many photons, and increase the chance of photons reflecting.",
+			desc: "释放100倍的光子，并增加光子反射的机会。",
 			req: 5
 		},
 		{
 			symbol: "Ra",
 			name: "Radium",
-			desc: "Releases 10000 times as many photons, increase Chain Reaction to 90%, generate x4 as much solar energy, and gain 1% of stars gained on reset.",
+			desc: "释放10000倍的光子，将链式反应增加到90%，产生x4倍的太阳能，并获得重置时获得的1%的恒星。",
 			req: 8
 		}],
 		secondary: [{
 			symbol: "C",
 			name: "Carbon",
-			desc: "Greenhouse gas?",
+			desc: "温室气体?",
 			req: 2
 		},
 		{
 			symbol: "O",
 			name: "Oxygen",
-			desc: "Reacts with Carbon to create a fruitful bang.",
+			desc: "与碳发生反应，产生丰富的爆炸。",
 			req: 2
 		},
 		{
 			symbol: "Si",
 			name: "Silicon",
-			desc: "Part 1 to a Dyson Sphere.",
+			desc: "戴森球体的第1部分。",
 			req: 6
 		},
 		{
 			symbol: "Fe",
 			name: "Iron",
-			desc: "Reacts with Oxygen slowly.",
+			desc: "与氧气反应缓慢。",
 			req: 4
 		},
 		{
 			symbol: "Cu",
 			name: "Copper",
-			desc: "Part 2 to a Dyson Sphere.",
+			desc: "戴森球体的第2部分。",
 			req: 6
 		},
 		{
 			symbol: "Cs",
 			name: "Caesium",
-			desc: "Wrecks havoc upon even touching oxygen.",
+			desc: "甚至连接触氧气都受到严重破坏。",
 			req: 7
 		},
 		{
 			symbol: "U",
 			name: "Uranium",
-			desc: "This is it. The last element that can be found naturally.",
+			desc: "这是它。自然找到的最后一个元素。",
 			req: 9
 		}],
 	}},
@@ -302,7 +302,7 @@ Vue.component("atom", {
 	template: `<button @click="player.star.primary = obj.symbol"
 	:class="{atomBtn: true, bought: player.star.primary == obj.symbol}"
 	v-if="player.star.unlockedAtoms >= obj.req"
-	:tooltip="obj.name + ': ' + obj.desc + ' (Click to use as primary)'">{{obj.symbol}}
+	:tooltip="obj.name + ': ' + obj.desc + ' (点击击以用作主要对象)'">{{obj.symbol}}
 	</button>`
 })
 Vue.component("atom2", {
@@ -318,7 +318,7 @@ Vue.component("atom2", {
 	template: `<button @click="buySecondaryAtom(obj.symbol)"
 	class="atomBtn"
 	v-if="player.star.unlockedAtoms >= obj.req"
-	:tooltip="obj.name + ': ' + obj.desc + ' You have ' + nc(player.star.secondary[obj.symbol].a) + ' (' + nc(player.star.secondary[obj.symbol].t) + ' bought) ' + obj.name + ' atoms. (Buy 1. Cost: ' + n(getAtomCosts[obj.symbol]) + ' photons)'"
+	:tooltip="obj.name + ': ' + obj.desc + ' 你有 ' + nc(player.star.secondary[obj.symbol].a) + ' (' + nc(player.star.secondary[obj.symbol].t) + ' 已购买) ' + obj.name + ' 原子. (购买 1. 成本: ' + n(getAtomCosts[obj.symbol]) + ' 光子)'"
 	:disabled="getAtomCosts[obj.symbol] > player.points">{{obj.symbol}}
 	</button>`
 })
